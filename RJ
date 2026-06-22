@@ -1,0 +1,10 @@
+import subprocess
+
+result = subprocess.run(
+    ["netsh", "wlan", "show", "profiles"],
+    capture_output=True,
+    text=True
+)
+
+print("Saved Wi-Fi Profiles:")
+print(result.stdout)
